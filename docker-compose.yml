@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+    phpapp:
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: phpapp:123
+        ports:
+            - "8080:80"
+        volumes:
+        - "./:/var/www/html"
+        container_name: myphpapp-app
+    
+    db:
+        image: mysql:5.7
+        restart: always
+        container_name: myphpapp-db
+        environment:
+            MYSQL_ROOT_PASSWORD: somepass
+            MYSQL_DATABASE: somedatabase
+        volumes:
+            - my-vol:/var/lib/mysql
+
+volumes:
+    my-vol:
+        name: my-vol
