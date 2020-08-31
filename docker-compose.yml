@@ -20,6 +20,8 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD: somepass
             MYSQL_DATABASE: somedatabase
+        ports:
+            - "33061:3306"
         volumes:
             - my-vol:/var/lib/mysql
 
