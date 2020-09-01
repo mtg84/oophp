@@ -1,17 +1,17 @@
 <?php
 
 //DB PARAMAS
-define('DB_HOST','db');
-define('DB_USER', 'root');
-define('DB_PASS', 'somepass');
-define('DB_NAME', 'somedatabase');
+define('DB_HOST','__YOUR_LOCALHOST__');
+define('DB_USER', '__YOUR_USER__');
+define('DB_PASS', '__YOUR_PASS__');
+define('DB_NAME', '__YOUR_DBNAME__');
 
 //App Root
 define('APPROOT', dirname(dirname(__FILE__)));
 
 //URL root
-define('URLROOT', 'http://localhost:8080/mvc');
+define('URLROOT', '__YOUR_URL__');
 
 //Site name
-define('SITENAME', 'My MVC');
+define('SITENAME', '__YOUR_SITENAME__');
 
