@@ -1,9 +1,12 @@
 <?php require APPROOT . '/views/inc/header.php';?>
 
 <div class="row">
+
     <div class="col-md-6 mx-auto mt-5 ">
         <div class="card card-body bg-light mt-5">
+        
             <h2 class="text-center">Create an Account</h2>
+       
             <p>Fill out this form to register with us</p>
             <form action="<?php echo URLROOT;?>/users/register" method="post">
                 <div class="form-group">
