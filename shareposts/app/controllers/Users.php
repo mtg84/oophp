@@ -33,6 +33,28 @@ class Users extends Controller{
 
     }
 
+    public function login(){
+
+        // Check for posts
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            //Process form
+        }
+        else{//laod form
+          // Init data
+          $data = [
+              'email' => '',
+              'password' => '',
+              'email_error' => '',
+              'password_error' => '',
+          ];  
+
+          //Load view
+          $this->view('users/login', $data);
+            
+        }
+
+    }
+
 
 
 }

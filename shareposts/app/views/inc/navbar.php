@@ -1,5 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-3">
-  <a class="navbar-brand" href="<?php echo URLROOT;?>">
+
+<div class="container">
+<a class="navbar-brand" href="<?php echo URLROOT;?>">
   <?php echo SITENAME; ?>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -10,7 +12,7 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo URLROOT; ?>">
         Home <span class="sr-only">(current)</span>
         </a>
@@ -21,7 +23,7 @@
     </ul>
 
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="<?php echo URLROOT;?>/users/register">Register <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -30,4 +32,6 @@
     </ul>
    
   </div>
+</div>
+ 
 </nav>
