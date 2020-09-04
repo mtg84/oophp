@@ -12,7 +12,7 @@
                     <input type="email" name="email" id="email" 
                     class="form-control form-control-lg 
                     <?php echo (!empty($data['email_error'])) ? 'is-invalid': '' ;?>"
-                    value="<?php $data['email'];?>" >
+                    value="<?php echo $data['email'];?>" >
                     <span class="invalid-feedback">
                     <?php echo $data['email_error'];?>
                     </span>
@@ -23,7 +23,7 @@
                     <input type="password" name="password" id="password" 
                     class="form-control form-control-lg 
                     <?php echo (!empty($data['password_error'])) ? 'is-invalid': '' ;?>"
-                    value="<?php $data['password'];?>" >
+                    value="<?php echo $data['password'];?>" >
                     <span class="invalid-feedback">
                     <?php echo $data['password_error'];?>
                     </span>
