@@ -3,6 +3,9 @@
 //Load config
 require_once 'config/config.php';
 
+//Load helpers
+require 'helpers/url_helper.php';
+
 // Load libraries
 // Autoload Core Libraries
 spl_autoload_register(function($className){
