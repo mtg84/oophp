@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top mb-5">
 
 <div class="container">
 <a class="navbar-brand" href="<?php echo URLROOT;?>">
