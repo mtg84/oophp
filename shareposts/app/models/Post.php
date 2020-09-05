@@ -25,4 +25,18 @@ class Post{
         return $results;
     }
 
+    public function addPost($data){
+        $this->db->query('INSERT INTO posts (title,body,user_id) values (:title,:body,:user_id);'); 
+        
+        $this->db->bind(':title',$data['title']);
+        $this->db->bind(':body',$data['body']);
+        $this->db->bind(':user_id',$data['user_id']);
+
+        if($this->db->execute()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

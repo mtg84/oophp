@@ -1,6 +1,6 @@
 <?php require APPROOT . '/views/inc/header.php';?>
 
-        <a href="<?php echo URLROOT;?>/posts/login" class="btn btn-light">
+        <a href="<?php echo URLROOT;?>/posts/add" class="btn btn-light">
             <i class="fa fa-backward"></i>
         </a>
 
@@ -11,7 +11,7 @@
          
             <h2 class="text-center">Add Post</h2>
             <p>Create a post with this form</p>
-            <form action="<?php echo URLROOT;?>/users/login" method="post">
+            <form action="<?php echo URLROOT;?>/posts/add" method="post">
                
                 <div class="form-group">
                     <label for="title">Title <sup>*</sup></label>
@@ -35,7 +35,7 @@
                    </textarea> 
                 
                     <span class="invalid-feedback">
-                    <?php echo $data['password_error'];?>
+                    <?php echo $data['body_error'];?>
                     </span>
                 </div>
 
