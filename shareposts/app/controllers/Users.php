@@ -105,7 +105,7 @@ class Users extends Controller{
 
     public function login(){
 
-        // Check for posts
+        // Check for POST
         if($_SERVER['REQUEST_METHOD'] == 'POST'){ //Process form
            
               //Sanitize POST data
@@ -129,10 +129,28 @@ class Users extends Controller{
                 $data['password_error'] = 'Please enter password';
             }
 
+            // Check for user/email
+            if($this->userModel->findUserByEmail($data['email'])){
+                //User found
+            }else{
+                //User not found
+                $data['email_error'] ='No user found';
+            }
+
             //Make sure errors are empty
             if( empty($data['email_error'])  && empty($data['password_error'])){
                 //Validated
-                die('Success');
+                //Check and set logged in user
+                $loggedInUser = $this->userModel->login($data['email'],$data['password']);
+
+                if($loggedInUser){
+                    //Create Session
+                    die('Logged Succes');
+                }else{
+                    //Rerender form with errors
+                    $data['password_error'] = 'Password incorrect';
+                    $this->view('users/login',$data);
+                }
             }else{
                 //Display the view with errors
                 $this->view('users/login',$data);
